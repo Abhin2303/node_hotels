@@ -1,0 +1,6 @@
+.grad {
+    background-image: linear-gradient(to right, red, black);
+
+    background-repeat: no-repeat;
+    color: black;
+}
