@@ -2,9 +2,12 @@ import express from 'express';
 import db, { mongoURL } from './db.js';
 import personRouter from './routes/personRoutes.js';
 import menuRouter from './routes/menuRoutes.js';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+dotenv.config();
+const PORT = process.env.PORT || 3000;
 const app = express();
 
-import bodyParser from 'body-parser';
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
@@ -17,6 +20,8 @@ app.use('/Menu', menuRouter);
 
 
 console.log("MongoDB connection URL: ", mongoURL);
-app.listen(3000, () => {
+// console.log("MongoDB Atlas connection URL: ", mongoAtlasURL);
+
+app.listen(PORT, () => {
     console.log("server in listening on port 3000");
 })
