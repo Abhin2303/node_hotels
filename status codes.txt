@@ -1,0 +1,5 @@
+200 - OK
+500 - ERROR
+400 - BAD REQUEST
+401 - Unauthorized
+404 - NOT FOUND

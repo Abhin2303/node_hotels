@@ -2,11 +2,11 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-// const mongoURL = 'mongodb://localhost:27018/hotel';
+const mongoURL = 'mongodb://localhost:27018/hotel';
 // const mongoURL = process.env.MONGODB_URL_LOCAL;
-// mongoose.connect(mongoURL)
+mongoose.connect(mongoURL)
 // const mongoURL = 'mongodb+srv://abhishekninawe2303:Abhi9573@cluster0.unpf9un.mongodb.net/';
-const mongoURL = process.env.MONGODB_URL;
+// const mongoURL = process.env.MONGODB_URL;
 
 mongoose.connect(mongoURL)
 
