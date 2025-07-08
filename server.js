@@ -26,14 +26,14 @@ const logRequest = (req, res, next) => {
 app.use(passport.initialize());
 const localAuthMiddleWre = passport.authenticate('local', { session: false });
 
-app.use('/Person', localAuthMiddleWre, personRouter);
-app.use('/Menu', menuRouter);
 
 //if we want to add authentication to these..then we can write:
 // app.use('/Person',localAuthMiddleWre, personRouter);
 // app.use('/Menu', localAuthMiddleWre,menuRouter);
 
 
+app.use('/Person', personRouter);
+app.use('/Menu', menuRouter);
 
 console.log("MongoDB connection URL: ", mongoURL);
 // console.log("MongoDB Atlas connection URL: ", mongoAtlasURL);
